@@ -1,0 +1,16 @@
+[versions]
+agp = "8.13.2"
+kotlin = "2.2.21"
+pluginPublish = "2.0.0"
+
+kotlinxCoroutines = "1.10.2"
+truth = "1.4.5"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "pluginPublish" }
