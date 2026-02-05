@@ -1,6 +1,6 @@
 [versions]
 agp = "8.13.2"
-kotlin = "2.2.21"
+kotlin = "2.3.10"
 pluginPublish = "2.0.0"
 
 kotlinxCoroutines = "1.10.2"
