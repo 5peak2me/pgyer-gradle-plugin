@@ -1,5 +1,7 @@
 # pgyer-gradle-plugin
 
+[![Version](https://img.shields.io/gradle-plugin-portal/v/io.github.5peak2me.gradle.pgyer)](https://plugins.gradle.org/plugin/io.github.5peak2me.gradle.pgyer)
+
 Add this plugin to your build using the plugins DSL:
 ```kotlin
 plugins {
