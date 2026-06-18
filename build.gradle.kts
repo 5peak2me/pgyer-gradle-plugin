@@ -1,3 +1,4 @@
+import org.gradle.plugin.compatibility.compatibility
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -47,10 +48,17 @@ gradlePlugin {
     plugins {
         register("pgyer-gradle-plugin") {
             id = "io.github.5peak2me.gradle.pgyer"
+            implementationClass = "io.github.speak2me.plugin.gradle.pgyer.PgyerPlugin"
+
             displayName = "pgyer-gradle-plugin"
             description = "上传 APK 到蒲公英平台"
             tags.set(listOf("android gradle plugin pgyer"))
-            implementationClass = "io.github.speak2me.plugin.gradle.pgyer.PgyerPlugin"
+
+            compatibility {
+                features {
+                    configurationCache = true
+                }
+            }
         }
     }
 }
