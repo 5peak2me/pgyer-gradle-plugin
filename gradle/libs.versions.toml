@@ -3,7 +3,7 @@ agp = "8.13.2"
 kotlin = "2.2.21"
 pluginPublish = "2.1.1"
 
-kotlinxCoroutines = "1.10.2"
+kotlinxCoroutines = "1.11.0"
 truth = "1.4.5"
 
 [libraries]
