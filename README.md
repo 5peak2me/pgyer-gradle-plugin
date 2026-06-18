@@ -6,7 +6,6 @@
 [![Gradle](https://img.shields.io/badge/Gradle-8.13-green.svg)](https://gradle.org)
 [![Configuration Cache](https://img.shields.io/badge/Configuration%20Cache-supported-brightgreen.svg)](https://docs.gradle.org/current/userguide/configuration_cache.html)
 
-
 Upload Android release APKs to [Pgyer](https://www.pgyer.com/) from Gradle.
 
 ## Installation
@@ -23,7 +22,7 @@ The plugin should be applied to an Android application module.
 
 ## Configuration
 
-Add the following properties to `~/.gradle/gradle.properties`:
+Add the following properties to your global Gradle properties file:
 
 | Parameter | Required | Default | Description |
 |---|---|---|---|
@@ -34,6 +33,8 @@ Add the following properties to `~/.gradle/gradle.properties`:
 PGY_API_KEY=your_api_key_here
 PGY_DOWNLOAD_PASSWORD=1P@ssword
 ```
+
+For most local setups, this file is located at `~/.gradle/gradle.properties`.
 
 ## Usage
 
@@ -48,3 +49,11 @@ The plugin registers upload tasks for release variants. For a flavored release v
 ```shell
 ./gradlew uploadDemoReleaseApk
 ```
+
+## CI
+
+This repository includes GitHub Actions workflows for tests, builds, and publishing to the Gradle Plugin Portal.
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).

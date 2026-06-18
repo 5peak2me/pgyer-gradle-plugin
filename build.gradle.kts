@@ -51,7 +51,7 @@ gradlePlugin {
             implementationClass = "io.github.speak2me.plugin.gradle.pgyer.PgyerPlugin"
 
             displayName = "pgyer-gradle-plugin"
-            description = "上传 APK 到蒲公英平台"
+            description = "Upload Android APKs to Pgyer"
             tags.set(listOf("android gradle plugin pgyer"))
 
             compatibility {
