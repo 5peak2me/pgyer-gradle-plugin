@@ -22,6 +22,7 @@ import org.gradle.api.tasks.PathSensitivity
 import org.gradle.api.tasks.SkipWhenEmpty
 import org.gradle.api.tasks.TaskAction
 import org.gradle.kotlin.dsl.submit
+import org.gradle.work.DisableCachingByDefault
 import org.gradle.workers.WorkAction
 import org.gradle.workers.WorkParameters
 import org.gradle.workers.WorkerExecutor
@@ -29,6 +30,7 @@ import org.jetbrains.kotlin.com.google.gson.annotations.SerializedName
 import java.io.File
 import javax.inject.Inject
 
+@DisableCachingByDefault(because = "Uploads APKs to an external service")
 internal abstract class PgyerTask @Inject constructor(
     private val worker: WorkerExecutor,
 ) : DefaultTask() {
