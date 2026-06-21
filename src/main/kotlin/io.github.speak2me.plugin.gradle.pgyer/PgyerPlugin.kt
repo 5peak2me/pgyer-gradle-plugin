@@ -12,29 +12,29 @@ import java.util.Locale
 @Suppress("unused")
 internal class PgyerPlugin : Plugin<Project> {
 
-    override fun apply(target: Project) {
-        with(target) {
-            extensions.configure<ApplicationAndroidComponentsExtension> {
-                onVariants(selector().withBuildType("release")) { variant ->
-                    configureUploadApkTask(variant)
-                }
-            }
+  override fun apply(target: Project) {
+    with(target) {
+      extensions.configure<ApplicationAndroidComponentsExtension> {
+        onVariants(selector().withBuildType("release")) { variant ->
+          configureUploadApkTask(variant)
         }
+      }
     }
+  }
 
-    internal fun Project.configureUploadApkTask(variant: ApplicationVariant) {
-        val apiKey = providers.gradleProperty("PGY_API_KEY")
-        val password = providers.gradleProperty("PGY_DOWNLOAD_PASSWORD").orElse("1P@ssword")
+  internal fun Project.configureUploadApkTask(variant: ApplicationVariant) {
+    val apiKey = providers.gradleProperty("PGY_API_KEY")
+    val password = providers.gradleProperty("PGY_DOWNLOAD_PASSWORD").orElse("1P@ssword")
 
-        @Suppress("DEPRECATION")
-        tasks.register<PgyerTask>("upload${variant.name.capitalize(Locale.getDefault())}Apk") {
-            group = "pgyer"
-            description = "Upload Android release APKs to Pgyer from Gradle."
-            this.apiKey.set(apiKey)
-            this.password.set(password)
-            builtArtifactsLoader.set(variant.artifacts.getBuiltArtifactsLoader())
-            apkDir.set(variant.artifacts.get(SingleArtifact.APK))
-        }
+    @Suppress("DEPRECATION")
+    tasks.register<PgyerTask>("upload${variant.name.capitalize(Locale.getDefault())}Apk") {
+      group = "pgyer"
+      description = "Upload Android release APKs to Pgyer from Gradle."
+      this.apiKey.set(apiKey)
+      this.password.set(password)
+      builtArtifactsLoader.set(variant.artifacts.getBuiltArtifactsLoader())
+      apkDir.set(variant.artifacts.get(SingleArtifact.APK))
     }
+  }
 
 }
