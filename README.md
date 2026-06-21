@@ -14,7 +14,7 @@ Add this plugin to your build using the plugins DSL:
 
 ```kotlin
 plugins {
-    id("io.github.5peak2me.gradle.pgyer") version "1.0.1-0"
+    id("io.github.5peak2me.gradle.pgyer") version "1.0.3"
 }
 ```
 
