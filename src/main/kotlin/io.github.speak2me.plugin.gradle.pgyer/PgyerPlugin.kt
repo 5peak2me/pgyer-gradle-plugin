@@ -29,7 +29,7 @@ internal class PgyerPlugin : Plugin<Project> {
         @Suppress("DEPRECATION")
         tasks.register<PgyerTask>("upload${variant.name.capitalize(Locale.getDefault())}Apk") {
             group = "pgyer"
-            description = "上传 APK 到蒲公英平台"
+            description = "Upload Android release APKs to Pgyer from Gradle."
             this.apiKey.set(apiKey)
             this.password.set(password)
             builtArtifactsLoader.set(variant.artifacts.getBuiltArtifactsLoader())
