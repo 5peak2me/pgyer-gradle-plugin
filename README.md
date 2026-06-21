@@ -1,9 +1,9 @@
 # pgyer-gradle-plugin
 
-[![Version](https://img.shields.io/gradle-plugin-portal/v/io.github.5peak2me.gradle.pgyer)](https://plugins.gradle.org/plugin/io.github.5peak2me.gradle.pgyer)
+[![Version](https://img.shields.io/gradle-plugin-portal/v/io.github.5peak2me.gradle.pgyer?logo=gradle)](https://plugins.gradle.org/plugin/io.github.5peak2me.gradle.pgyer)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.21-green.svg)](https://kotlinlang.org)
-[![Gradle](https://img.shields.io/badge/Gradle-8.13-green.svg)](https://gradle.org)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.4.0-green.svg?logo=kotlin)](https://kotlinlang.org)
+[![Gradle](https://img.shields.io/badge/Gradle-9.6.0-green.svg?logo=gradle)](https://gradle.org)
 [![Configuration Cache](https://img.shields.io/badge/Configuration%20Cache-supported-brightgreen.svg)](https://docs.gradle.org/current/userguide/configuration_cache.html)
 
 Upload Android release APKs to [Pgyer](https://www.pgyer.com/) from Gradle.
@@ -49,10 +49,6 @@ The plugin registers upload tasks for release variants. For a flavored release v
 ```shell
 ./gradlew uploadDemoReleaseApk
 ```
-
-## CI
-
-This repository includes GitHub Actions workflows for tests, builds, and publishing to the Gradle Plugin Portal.
 
 ## License
 
