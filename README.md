@@ -24,10 +24,10 @@ The plugin should be applied to an Android application module.
 
 Add the following properties to your global Gradle properties file:
 
-| Parameter | Required | Default | Description |
-|---|---|---|---|
-| `PGY_API_KEY` | Yes | - | Pgyer API Key, obtained from [https://www.pgyer.com/account/api](https://www.pgyer.com/account/api) |
-| `PGY_DOWNLOAD_PASSWORD` | No | `1P@ssword` | APK download password |
+| Parameter               | Required | Default     | Description                                                                                         |
+|-------------------------|----------|-------------|-----------------------------------------------------------------------------------------------------|
+| `PGY_API_KEY`           | Yes      | -           | Pgyer API Key, obtained from [https://www.pgyer.com/account/api](https://www.pgyer.com/account/api) |
+| `PGY_DOWNLOAD_PASSWORD` | No       | `1P@ssword` | APK download password                                                                               |
 
 ```properties
 PGY_API_KEY=your_api_key_here
