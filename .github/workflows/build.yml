@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-java@v5.7.0
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 17.0.20+8
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6.3.0
